@@ -25,8 +25,9 @@ const OtpForm = () => {
                 <div className="py-4 px-8 border-2 border-black border-b-4 mx-2 rounded-md">
                   <input
                     {...props}
-                    className="border-none outline-none text-2xl"
+                    className="border-none outline-none text-2xl [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
                     placeholder="*"
+                    type="number"
                   />{" "}
                 </div>
               );
