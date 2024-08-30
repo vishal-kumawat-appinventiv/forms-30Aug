@@ -52,7 +52,7 @@ const MyForm = () => {
             <p className="absolute top-3 right-3">✅</p>
           </div>
         </div>
-        <div className="flex items-center justify-between w-full">
+        <div className="flex items-center justify-between w-full mt-2">
           <div>
             <label className="flex items-center space-x-2">
               <input
@@ -76,6 +76,16 @@ const MyForm = () => {
           <div>
             <ToggleSwitch />
           </div>
+        </div>
+        <div className="anything flex flex-col w-full">
+          <label htmlFor="">Enter Anything</label>
+          <input
+            type="text"
+            name="anything"
+            id="anything"
+            placeholder="Write your text here"
+            className="border-2 border-black rounded p-2 text-xl border-b-4"
+          />
         </div>
       </form>
     </>
