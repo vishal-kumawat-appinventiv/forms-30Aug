@@ -22,7 +22,7 @@ const MyForm = () => {
             className="border-2 border-black rounded p-2 text-xl border-b-4"
           />
         </div>
-        <div className="phoneNumber flex mt-2 w-full">
+        <div className="phoneNumber flex mt-5 w-full">
           <input
             type="number"
             name="phonenumber"
@@ -37,6 +37,20 @@ const MyForm = () => {
             Verify
           </button>
         </div>
+        <div className="personalID w-full flex flex-col relative">
+          <label htmlFor="personalID">Personal Id Number</label>
+          <div className="relative">
+            <input
+              type="text"
+              name="personalID"
+              id="personalID"
+              defaultValue={"Value"}
+              className="border-2 border-black rounded p-2 pr-8 text-xl border-b-4 w-full"
+            />
+            <p className="absolute top-3 right-3">✅</p>
+          </div>
+        </div>
+        
       </form>
     </>
   );
