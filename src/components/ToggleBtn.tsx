@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const ToggleSwitch: React.FC = () => {
+const ToggleBtn: React.FC = () => {
   const [isOn, setIsOn] = useState(false);
 
   const handleToggle = () => {
@@ -23,4 +23,4 @@ const ToggleSwitch: React.FC = () => {
   );
 };
 
-export default ToggleSwitch;
+export default ToggleBtn;
