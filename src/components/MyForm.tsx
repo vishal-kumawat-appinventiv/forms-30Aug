@@ -1,12 +1,24 @@
 import { useEffect, useRef, useState } from "react";
 import ToggleBtn from "./ToggleBtn";
 
+interface InputType {
+  username: string;
+  email: string;
+  phoneNumber: string;
+  personalID: string;
+  gender: string;
+  anything: string;
+  select: string;
+  date: string;
+  termsAndConditions: boolean;
+}
+
 const MyForm = () => {
-  const [inputState, setInputState] = useState({
+  const [inputState, setInputState] = useState<InputType>({
     username: "",
     email: "",
     phoneNumber: "",
-    personalID: "Value",
+    personalID: "",
     gender: "",
     anything: "",
     select: "",
@@ -15,21 +27,21 @@ const MyForm = () => {
   });
 
   const handleChange = (e: any) => {
-    const { name, value, type, checked } = e.target;
+    const { name, type, checked, value } = e.target;
     setInputState((prevState) => ({
       ...prevState,
       [name]: type === "checkbox" ? checked : value,
     }));
   };
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log(inputState);
     setInputState({
       username: "",
       email: "",
       phoneNumber: "",
-      personalID: "Value",
+      personalID: "",
       gender: "",
       anything: "",
       select: "",
@@ -92,7 +104,7 @@ const MyForm = () => {
           required
         />
         <button
-          disabled={true}
+          disabled
           className="w-32 text-sm p-4 border-2 border-blue-500 border-b-4 rounded text-blue-500 ml-2"
         >
           Verify
