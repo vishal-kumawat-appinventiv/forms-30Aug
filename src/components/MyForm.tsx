@@ -48,6 +48,7 @@ const MyForm = () => {
           className="border-2 border-black rounded p-2 text-xl border-b-4"
           value={inputState.username}
           onChange={handleChange}
+          required
         />
       </div>
 
@@ -61,6 +62,7 @@ const MyForm = () => {
           className="border-2 border-black rounded p-2 text-xl border-b-4"
           value={inputState.email}
           onChange={handleChange}
+          required
         />
       </div>
 
@@ -73,6 +75,7 @@ const MyForm = () => {
           className="border-2 border-black rounded p-2 text-lg border-b-4 flex-1"
           value={inputState.phoneNumber}
           onChange={handleChange}
+          required
         />
         <button
           disabled={true}
@@ -92,6 +95,7 @@ const MyForm = () => {
             className="border-2 border-black rounded p-2 pr-8 text-xl border-b-4 w-full"
             value={inputState.personalID}
             onChange={handleChange}
+            required
           />
           <p className="absolute top-3 right-3">✅</p>
         </div>
@@ -107,6 +111,7 @@ const MyForm = () => {
               className="w-6 h-6 text-blue-500 bg-gray-100 border-gray-300 focus:ring-blue-500"
               checked={inputState.gender === "male"}
               onChange={handleChange}
+              required
             />
             <span>Male</span>
           </label>
@@ -120,6 +125,7 @@ const MyForm = () => {
               className="w-6 h-6 text-blue-500 bg-gray-100 border-gray-300 focus:ring-blue-500"
               checked={inputState.gender === "female"}
               onChange={handleChange}
+              required
             />
             <span>Female</span>
           </label>
@@ -139,6 +145,7 @@ const MyForm = () => {
           className="border-2 border-black rounded p-2 text-xl border-b-4"
           value={inputState.anything}
           onChange={handleChange}
+          required
         />
       </div>
 
@@ -168,6 +175,7 @@ const MyForm = () => {
           className="border-2 border-black rounded p-2 text-xl border-b-4"
           value={inputState.date}
           onChange={handleChange}
+          required
         />
       </div>
 
@@ -177,6 +185,7 @@ const MyForm = () => {
           name="termsAndConditions"
           checked={inputState.termsAndConditions}
           onChange={handleChange}
+          required
         />
         <p className="ml-2">Terms and Conditions</p>
       </div>
