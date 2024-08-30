@@ -87,6 +87,21 @@ const MyForm = () => {
             className="border-2 border-black rounded p-2 text-xl border-b-4"
           />
         </div>
+        <div className="selectOption flex flex-col w-full">
+          <label htmlFor="select">Select Option</label>
+          <select
+            name="select"
+            id="select"
+            defaultValue=""
+            className="border-2 border-black rounded p-2 text-xl border-b-4 bg-white"
+          >
+            <option value="" disabled>
+              Select Options
+            </option>
+            <option value="hello">Hello</option>
+            <option value="world">World</option>
+          </select>
+        </div>
       </form>
     </>
   );
