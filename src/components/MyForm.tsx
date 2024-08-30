@@ -111,6 +111,12 @@ const MyForm = () => {
             className="border-2 border-black rounded p-2 text-xl border-b-4"
           />
         </div>
+        <div className="termsAndConditions flex w-full">
+          <input type="checkbox" name="termsAndConditions" />
+          <p className="ml-2">
+            Terms and Conditions
+          </p>
+        </div>
       </form>
     </>
   );
