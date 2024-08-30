@@ -102,6 +102,15 @@ const MyForm = () => {
             <option value="world">World</option>
           </select>
         </div>
+        <div className="dateSelector flex flex-col w-full">
+          <label htmlFor="date">Select Date</label>
+          <input
+            type="date"
+            name="date"
+            id="date"
+            className="border-2 border-black rounded p-2 text-xl border-b-4"
+          />
+        </div>
       </form>
     </>
   );
