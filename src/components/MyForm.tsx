@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import ToggleBtn from "./ToggleBtn";
 
 const MyForm = () => {
@@ -24,14 +24,27 @@ const MyForm = () => {
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
-
-    if (!inputState.termsAndConditions) {
-      alert("Please accept the terms and conditions.");
-      return;
-    }
-
     console.log(inputState);
+    setInputState({
+      username: "",
+      email: "",
+      phoneNumber: "",
+      personalID: "Value",
+      gender: "",
+      anything: "",
+      select: "",
+      date: "",
+      termsAndConditions: false,
+    });
   };
+
+  const usernameRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    if (usernameRef.current) {
+      usernameRef.current.focus();
+    }
+  }, []);
 
   return (
     <form
@@ -48,6 +61,7 @@ const MyForm = () => {
           className="border-2 border-black rounded p-2 text-xl border-b-4"
           value={inputState.username}
           onChange={handleChange}
+          ref={usernameRef}
           required
         />
       </div>
