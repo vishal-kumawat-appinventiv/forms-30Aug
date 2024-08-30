@@ -1,3 +1,5 @@
+import ToggleSwitch from "./ToggleBtn";
+
 const MyForm = () => {
   return (
     <>
@@ -50,7 +52,31 @@ const MyForm = () => {
             <p className="absolute top-3 right-3">✅</p>
           </div>
         </div>
-        
+        <div className="flex items-center justify-between w-full">
+          <div>
+            <label className="flex items-center space-x-2">
+              <input
+                type="radio"
+                name="male"
+                className="w-6 h-6 text-blue-500 bg-gray-100 border-gray-300 focus:ring-blue-500"
+              />
+              <span>Male</span>
+            </label>
+          </div>
+          <div>
+            <label className="flex items-center space-x-2">
+              <input
+                type="radio"
+                name="female"
+                className="w-6 h-6 text-blue-500 bg-gray-100 border-gray-300 focus:ring-blue-500"
+              />
+              <span>Female</span>
+            </label>
+          </div>
+          <div>
+            <ToggleSwitch />
+          </div>
+        </div>
       </form>
     </>
   );
