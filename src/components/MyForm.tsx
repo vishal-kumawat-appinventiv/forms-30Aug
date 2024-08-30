@@ -117,6 +117,9 @@ const MyForm = () => {
             Terms and Conditions
           </p>
         </div>
+        <div className="submit w-full mt-5">
+            <button className="bg-[#4a3ee6] text-white items-center w-full py-3 rounded">Submit</button>
+        </div>
       </form>
     </>
   );
